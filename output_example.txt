@@ -1,0 +1,26 @@
+; ============================================================
+; Yuui-OS Kernel - Gerado pelo Compilador Yuui-Lang
+; ============================================================
+
+BITS 64
+ORG 0x100000
+
+section .text
+kernel_principal:
+    push rbp
+    mov rbp, rsp
+    
+    ; Limpando tela VGA (80x25)
+    mov rdi, 0xB8000
+    mov rcx, 80*25
+    mov ax, 0x0720
+    rep stosw
+    
+    ; Escrevendo string: "Yuui-OS Kernel v0.1"
+    mov rsi, .str_1
+    mov rdi, 0xB8000
+    call escrever_string_vga
+    
+    mov rsp, rbp
+    pop rbp
+    ret

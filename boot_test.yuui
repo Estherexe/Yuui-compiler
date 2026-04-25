@@ -1,0 +1,16 @@
+// boot_test.yuui - Teste de Boot da Yuui-Lang
+// Encoding: ASCII (sem caracteres especiais)
+
+modo 16bits {
+    funcao _start() {
+        memoria video = 0xB8000
+        
+        // Escreve na tela
+        video.escrever("YUUI-OS")
+        video.escrever("Yuui-Lang v0.2 - VIVA!")
+        
+        enquanto (1 == 1) {
+            // Loop eterno
+        }
+    }
+}

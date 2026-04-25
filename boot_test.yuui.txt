@@ -1,0 +1,33 @@
+// boot_test.yuui - O Ritual de Passagem da Yuui-Lang
+// Objetivo: Escrever "YUUI-OS" na tela via memória VGA (0xB8000)
+// Se isto compilar e rodar no QEMU... a linguagem está VIVA.
+
+modo 16bits {
+    funcao _start() {
+        // Define o segmento de dados
+        // No modo real, precisamos configurar os segmentos
+        // ax = 0x07C0 (segmento de boot)
+        palavra segmento = 0x07C0
+        
+        // Configura segmento de dados
+        // mov ds, ax
+        ds = segmento
+        
+        // Mapeia a memória de vídeo VGA (modo texto colorido)
+        memoria video = 0xB8000
+        
+        // Escreve a string mágica caractere por caractere
+        video.escrever("Y")  // 0xB8000
+        video.escrever("U")  // 0xB8002
+        video.escrever("U")  // 0xB8004
+        video.escrever("I")  // 0xB8006
+        video.escrever("-")  // 0xB8008
+        video.escrever("O")  // 0xB800A
+        video.escrever("S")  // 0xB800C
+        
+        // Loop infinito para não crashar
+        enquanto (1 == 1) {
+            // Aguarda... o bootloader nunca deve retornar
+        }
+    }
+}

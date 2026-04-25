@@ -1,0 +1,21 @@
+1. Estrutura NASM Completa
+
+section .text    → Código executável
+section .data    → Strings e constantes
+section .bss     → Variáveis não inicializadas
+section .boot    → Setor de boot (modo real)
+
+
+2. Traduções Diretas Yuui-Lang → Assembly
+
+Yuui-Lang	             		Assembly NASM
+
+memoria video = 0xB8000		video_addr equ 0xB8000
+
+video.escrever("texto")		call escrever_string_vga
+
+byte contador = 0		mov byte [contador], 0
+
+enquanto (x < 10)		.loop: cmp ... jge .fim
+
+port.outb(0x20, 0x20)		out dx, al

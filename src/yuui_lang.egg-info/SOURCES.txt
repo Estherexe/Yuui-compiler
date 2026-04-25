@@ -1,0 +1,6 @@
+setup.py
+src/yuui/__init__.py
+src/yuui_lang.egg-info/PKG-INFO
+src/yuui_lang.egg-info/SOURCES.txt
+src/yuui_lang.egg-info/dependency_links.txt
+src/yuui_lang.egg-info/top_level.txt

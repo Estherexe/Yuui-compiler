@@ -1,0 +1,7 @@
+// Meu primeiro código na Yuui-Lang
+memoria tela = 0xB8000
+
+funcao principal() {
+    byte cor = 0x0F // Branco no preto
+    tela.pintar(cor)
+}

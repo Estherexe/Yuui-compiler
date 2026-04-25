@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: yuui-lang
+Version: 0.2.0
+Summary: Linguagem de Programacao para Sistemas Operacionais
+Author: Yuui
+Requires-Python: >=3.8
+Dynamic: author
+Dynamic: requires-python
+Dynamic: summary

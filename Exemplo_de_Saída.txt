@@ -1,0 +1,23 @@
+🔧 YUUI-LANG COMPILER v0.1
+📄 Compilando: kernel.yuui
+============================================================
+
+🔍 [1/5] Análise Léxica...
+   ✅ 245 tokens gerados
+
+🌳 [2/5] Análise Sintática + Verificação de Tipos...
+   ✅ AST gerada com 67 nós
+   ✅ 12 símbolos registrados
+
+⚙️  [3/5] Gerando Código Assembly...
+   ✅ Assembly gerado: kernel.asm
+   ✅ 89 linhas de código
+
+🔨 [4/5] Montando com NASM...
+   ✅ Objeto gerado: kernel.o
+
+🔗 [5/5] Ligando com LD...
+   ✅ Binário gerado: kernel.bin
+   ✅ Tamanho: 4096 bytes
+
+✅ COMPILAÇÃO CONCLUÍDA COM SUCESSO!
